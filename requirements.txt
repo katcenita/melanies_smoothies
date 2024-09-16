@@ -2,5 +2,4 @@
 snowflake-snowpark-python
 streamlit
 requests
-git+https://github.com/username/repo.git
 git+https://github.com/psf/requests.git

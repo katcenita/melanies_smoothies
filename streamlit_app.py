@@ -17,7 +17,7 @@ st.write('The name on your Smoothie wil be:', name_on_order)
 ##st.write("The current movie title is", title)
 
 
-from snowflake.snowpark.functions import col
+#from snowflake.snowpark.functions import col
 
 ## option = st.selectbox(
 ##    "What is your favorite fruit?",

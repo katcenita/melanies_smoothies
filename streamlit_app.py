@@ -10,7 +10,7 @@ st.write(
 
 ##import streamlit as st
 
-name_on_order = st.text_input('Name on Smothie:')
+name_on_order = st.text_input('Name on Smoothie:')
 st.write('The name on your Smoothie wil be:', name_on_order)
 
 ##title = st.text_input("Movie title", "Life of Brian")
@@ -29,13 +29,13 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name')),col(('search_on'))
-st.dataframe(data=my_dataframe, use_container_width=True)
-st.stop()
+#st.dataframe(data=my_dataframe, use_container_width=True)
+#st.stop()
 
 #Convert the Snowpark Dataframe toa Pandas dataframe so we can use the LOC function
-#pd_df=my_dataframe.to_pandas()
-#st.dataframe(pd_df)
-#st.stop()
+pd_df=my_dataframe.to_pandas()
+st.dataframe(pd_df)
+st.stop()
 
 ingredients_list = st.multiselect('Choose up to 5 ingredients :'
                                  , my_dataframe
